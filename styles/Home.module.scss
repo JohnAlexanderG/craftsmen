@@ -1,0 +1,178 @@
+.card {
+    margin: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(#030303, 0.15);
+    overflow: hidden;
+    @media screen and (min-width: 830px) {
+        padding-bottom: 0rem;
+        box-shadow: none;
+        max-width: 798px;
+        margin: 3rem auto;
+    }
+    @media screen and (min-width: 1366px) {
+        max-width: 1024px;
+    }
+
+    &_info {
+        @media screen and (min-width: 830px) {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-auto-flow: dense;
+        }
+        @media screen and (min-width: 1366px) {
+            grid-template-columns: 40% 60%;
+            grid-auto-flow: dense;
+        }
+        &__image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            outline: none;
+            position: relative;
+            z-index: 50;
+            overflow: hidden;
+
+            @media screen and (min-width: 830px) {
+                grid-column: 1/2;
+                grid-row: 1/4;
+            }
+        }
+        &__title {
+            display: flex;
+            align-items: center;
+            @media screen and (min-width: 830px) {
+                grid-column: 2/3;
+                grid-row: 1/2;
+            }
+        }
+        &__description_text {
+            display: flex;
+            align-items: center;
+            @media screen and (min-width: 830px) {
+                grid-column: 2/3;
+                grid-row: 2/3;
+            }
+        }
+        &__link {
+            display: flex;
+            align-items: center;
+            a {
+                cursor: pointer;
+                width: 100%;
+                text-align: center;
+                margin: 0 1rem;
+                background-color: transparent;
+                border: 1px solid #ddb451;
+                color: #ddb451;
+                font-size: 1.25rem;
+                padding: 1.25rem 3rem;
+                border-radius: 6px;
+                &:hover {
+                    background-color: #ddb451;
+                    color: #fff;
+                }
+                @media screen and (min-width: 830px) {
+                    width: auto;
+                }
+            }
+            @media screen and (min-width: 830px) {
+                grid-column: 2/3;
+                grid-row: 3/4;
+            }
+        }
+    }
+
+    &:nth-child(even) {
+        .card_info {
+            @media screen and (min-width: 1366px) {
+                grid-template-columns: 60% 40%;
+            }
+            &__image {
+                @media screen and (min-width: 830px) {
+                    grid-column: 2/3;
+                    grid-row: 1/4;
+                }
+            }
+            &__title {
+                @media screen and (min-width: 830px) {
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                }
+            }
+            &__description_text {
+                @media screen and (min-width: 830px) {
+                    grid-column: 1/2;
+                    grid-row: 2/3;
+                }
+            }
+
+            &__link {
+                @media screen and (min-width: 830px) {
+                    grid-column: 1/2;
+                    grid-row: 3/4;
+                }
+            }
+        }
+    }
+}
+
+
+.footer {
+    background-color: #030303;
+    height: 600px;
+    display: flex;
+    justify-content: space-around;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 1.5rem 2rem;
+    
+    @media screen and (min-width: 1024px) {
+        padding: 2.5rem 4rem;
+        height: 300px;
+        flex-direction: row;
+        justify-content: space-around;
+        justify-content: space-evenly;
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 150px;
+        @media screen and (min-width: 1024px) {
+            height: auto;
+
+        }
+        img {
+            width: 100%;
+            max-width: 350px;
+            @media screen and (min-width: 1366px) {
+                width: 300px;
+            }
+        }
+    }
+
+    &__contact {
+        color: #fff;
+        @media screen and (min-width: 1366px) {
+            padding-top: 2rem;
+            width: 300px;
+        }
+        h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        ul {
+            margin: 2rem 0;
+            li {
+                margin-top: 0.5rem;
+                padding-bottom: 0.5rem;
+            }
+        }
+    }
+}

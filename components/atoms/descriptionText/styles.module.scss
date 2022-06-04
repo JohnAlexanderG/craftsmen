@@ -1,0 +1,10 @@
+.description_text {
+    margin: 0 1rem 1rem;
+    font-family: OpenSans;
+    font-weight: 300;
+    line-height: 1.45rem;
+    @media screen and (min-width: 830px) {
+        margin: 0 1rem;
+        font-size: 1.1rem;
+    }
+}
