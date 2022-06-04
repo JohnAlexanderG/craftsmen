@@ -27,7 +27,7 @@ interface dataType {
 
 export const getStaticProps: GetStaticProps = async () => {
   try {
-    const response = await fetch('https://craftmen.vercel.app/api/data')
+    const response = await fetch('https://craftsmen-one.vercel.app/api/data')
     // const response = await fetch('http://localhost:3000/api/data')
     const { data } = await response.json()
     return {
@@ -85,7 +85,7 @@ const Home: NextPage = ({ data }: InferGetStaticPropsType<typeof getStaticProps>
                     transition={{ ease: "backInOut", duration: 2 }}
                   >
                     <a onClick={() => {
-                      const newGallery = element.photo_gallery.map((galleryItem) => `//craftmen.vercel.app${galleryItem}`);
+                      const newGallery = element.photo_gallery.map((galleryItem) => `//craftsmen-one.vercel.app${galleryItem}`);
                       setGalleryToShow(newGallery)
                       setIsOpen(true);
                     }}>ver catalogo</a>
